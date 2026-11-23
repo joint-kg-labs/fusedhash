@@ -1,0 +1,21 @@
+// CSPA (context-sensitive points-to analysis, Graspan), regole di GDlog (ASPLOS'25, Fig. 12).
+.decl assign(x:number, y:number)
+.decl dereference(x:number, y:number)
+.input assign(filename="Assign.csv", delimiter=",")
+.input dereference(filename="Dereference.csv", delimiter=",")
+.decl ValueFlow(x:number, y:number)
+.decl ValueAlias(x:number, y:number)
+.decl MemoryAlias(x:number, y:number)
+ValueFlow(y, x) :- assign(y, x).
+ValueFlow(x, y) :- assign(x, z), MemoryAlias(z, y).
+ValueFlow(x, y) :- ValueFlow(x, z), ValueFlow(z, y).
+MemoryAlias(x, w) :- dereference(y, x), ValueAlias(y, z), dereference(z, w).
+ValueAlias(x, y) :- ValueFlow(z, x), ValueFlow(z, y).
+ValueAlias(x, y) :- ValueFlow(z, x), MemoryAlias(z, w), ValueFlow(w, y).
+ValueFlow(x, x) :- assign(x, _).
+ValueFlow(x, x) :- assign(_, x).
+MemoryAlias(x, x) :- assign(_, x).
+MemoryAlias(x, x) :- assign(x, _).
+.printsize ValueFlow
+.printsize ValueAlias
+.printsize MemoryAlias

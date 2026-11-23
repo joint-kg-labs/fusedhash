@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the paper below."
+title: "FusedHash: Datalog evaluation on GPUs with fused hash kernels"
+type: software
+authors:
+  - family-names: Bellomarini
+    given-names: Luigi
+    affiliation: "Banca d'Italia"
+  - family-names: Brandetti
+    given-names: Matteo
+    affiliation: "Banca d'Italia"
+  - family-names: Sallinger
+    given-names: Emanuel
+    affiliation: "TU Wien"
+preferred-citation:
+  type: article
+  title: "Accelerating Datalog Evaluation on GPUs with Fused Hash Kernels"
+  authors:
+    - family-names: Bellomarini
+      given-names: Luigi
+    - family-names: Brandetti
+      given-names: Matteo
+    - family-names: Sallinger
+      given-names: Emanuel

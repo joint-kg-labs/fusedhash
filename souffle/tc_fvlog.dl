@@ -1,0 +1,7 @@
+// Reach di FVlog/GDlog: Reach(x,y) <- Edge(x,y).  Reach(x,z) <- Edge(x,y), Reach(y,z).
+.decl edge(x:number, y:number)
+.input edge
+.decl reach(x:number, y:number)
+reach(x, y) :- edge(x, y).
+reach(x, z) :- edge(x, y), reach(y, z).
+.printsize reach

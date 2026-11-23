@@ -1,0 +1,3 @@
+program,dataset,nodes,edges,result,fusedhash_s,fusedhash_plan,fusedhash_set,sortmerge_s,sortmerge_plan,fvlog_s,fvlog_result,souffle_s,souffle_rss_gib,agree,notes
+tc,G60K,60000,3602324,3600000000,5.1734,4,bitmap,OOM,16,error,,709.33,176.8,1,fvlog:   what():  parallel_for: failed to synchronize: cudaErrorIllegalAddress: an illegal memory access was encountered
+tc,G80K,80000,6403100,6400000000,12.1325,4,bitmap,OOM,16,error,,error,213.3,1,fvlog:   what():  parallel_for: failed to synchronize: cudaErrorIllegalAddress: an illegal memory access was encountered; souffle: 	User time (seconds): 6276.23

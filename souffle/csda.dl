@@ -1,0 +1,10 @@
+// CSDA (context-sensitive dataflow analysis, Graspan), the program of the FlowLog artifact (csda.dl):
+// NullNode(x,y) :- NullEdge(x,y).  NullNode(x,y) :- NullNode(x,w), Edge(w,y).
+.decl NullEdge(x:number, y:number)
+.decl Edge(x:number, y:number)
+.input NullEdge(filename="NullEdge.csv", delimiter=",")
+.input Edge(filename="Edge.csv", delimiter=",")
+.decl NullNode(x:number, y:number)
+NullNode(x, y) :- NullEdge(x, y).
+NullNode(x, y) :- NullNode(x, w), Edge(w, y).
+.printsize NullNode

@@ -1,0 +1,7 @@
+name, memory.total [MiB], driver_version
+NVIDIA A100 80GB PCIe, 81920 MiB, 580.178.04
+Cuda compilation tools, release 12.9, V12.9.86
+Build cuda_12.9.r12.9/compiler.36037853_0
+cpu: AMD EPYC 7V13 64-Core Processor x 24 threads
+               total        used        free      shared  buff/cache   available
+Mem:             216           3         197           0          17         212
