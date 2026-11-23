@@ -1,4 +1,4 @@
-# FusedHash: Datalog evaluation on GPUs with fused hash kernels
+# FusedHash: Datalog Evaluation on GPUs with Fused Hash Kernels
 
 This repository contains the code, the experiment scripts and the measured results of the paper
 
